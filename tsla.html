@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSLA Stock Analysis - May 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+        }
+        .highlight-green { color: #22c55e; font-weight: 600; }
+        .highlight-red { color: #ef4444; font-weight: 600; }
+        .highlight-yellow { color: #eab308; font-weight: 600; }
+        .highlight-blue { color: #3b82f6; font-weight: 600; }
+        
+        .card {
+            background-color: #1e293b; /* Slate 800 */
+            border: 1px solid #334155;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tooltip Setup */
+        .has-tooltip { position: relative; cursor: help; border-bottom: 1px dotted #94a3b8; }
+        .tooltip {
+            visibility: hidden;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            width: max-content;
+            max-width: 200px;
+            font-size: 0.75rem;
+            font-weight: normal;
+        }
+        .has-tooltip:hover .tooltip { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto space-y-6">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-700 pb-4">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight">Tesla, Inc. <span class="text-slate-400 text-xl font-normal">(NASDAQ: TSLA)</span></h1>
+                <p class="text-slate-400 mt-1">Market Analysis as of <span class="highlight-blue">May 13, 2026</span></p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+                <div class="text-4xl font-bold">$445.27</div>
+                <div class="highlight-green text-sm flex items-center justify-end mt-1">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    Strong Short-Term Bullish
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Technicals -->
+            <div class="card rounded-xl p-6">
+                <h2 class="text-xl font-semibold mb-4 border-b border-slate-700 pb-2 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                    Stock Performance & Technicals
+                </h2>
+                <ul class="space-y-3 text-slate-300">
+                    <li><span class="text-slate-400">Momentum:</span> Up nearly <span class="highlight-green">18%</span> over the past month.</li>
+                    <li>
+                        <span class="text-slate-400">RSI:</span> 
+                        <span class="highlight-red">74</span> 
+                        (<span class="has-tooltip highlight-red">Overbought<span class="tooltip">An RSI above 70 indicates the asset may be overvalued in the short term and primed for a pullback.</span></span>) 
+                        - <span class="text-sm">Expect near-term consolidation.</span>
+                    </li>
+                    <li>
+                        <span class="text-slate-400">Resistance:</span> Critical level at <span class="highlight-yellow">$449.16</span>.
+                    </li>
+                    <li>
+                        <span class="text-slate-400">Support:</span> Immediate at <span class="highlight-yellow">$422.61</span>, 200-day MA at <span class="highlight-yellow">$384.04</span>.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Financials -->
+            <div class="card rounded-xl p-6">
+                <h2 class="text-xl font-semibold mb-4 border-b border-slate-700 pb-2 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Financial Health (Q1 2026)
+                </h2>
+                <ul class="space-y-3 text-slate-300">
+                    <li><span class="text-slate-400">Earnings:</span> Beat expectations with EPS of <span class="highlight-green">$0.41</span> (vs $0.36-$0.39 est).</li>
+                    <li><span class="text-slate-400">Revenue:</span> $22.39B (<span class="highlight-green">+15.8% YoY</span>), though a <span class="highlight-yellow">slight miss</span> vs $22.6B targets.</li>
+                    <li><span class="text-slate-400">Margins:</span> GAAP gross margin improved to <span class="highlight-green">21.1%</span> (up from 16.3% in Q1 '25).</li>
+                    <li>
+                        <span class="text-slate-400">Delivery Gap:</span> Production high (<span class="highlight-blue">408,386</span>) but deliveries lagged (<span class="highlight-red">358,023</span>). 
+                        <span class="highlight-red text-sm block mt-1">⚠️ Warning: Notable inventory buildup.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Outlook & Consensus -->
+            <div class="card rounded-xl p-6 md:col-span-2">
+                <h2 class="text-xl font-semibold mb-4 border-b border-slate-700 pb-2 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    Future Outlook & Analyst Consensus
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300">
+                    <div>
+                        <p class="mb-2"><span class="text-slate-400">Consensus Rating:</span> <span class="highlight-yellow">HOLD</span></p>
+                        <div class="w-full bg-slate-700 rounded-full h-4 mb-4 flex overflow-hidden">
+                            <div class="bg-green-500 h-4" style="width: 56%;" title="19 Buys"></div>
+                            <div class="bg-yellow-500 h-4" style="width: 14%;" title="5 Holds"></div>
+                            <div class="bg-red-500 h-4" style="width: 30%;" title="10 Sells"></div>
+                        </div>
+                        <p class="text-sm">19 Buys | 5 Holds | 10 Sells</p>
+                    </div>
+                    <div>
+                        <p class="mb-2"><span class="text-slate-400">Average Price Target:</span> <span class="highlight-red">$398 - $403</span></p>
+                        <p class="text-sm">Current price is <span class="highlight-red">above consensus targets</span>, suggesting the stock may be temporarily overvalued.</p>
+                        <p class="mt-3"><span class="text-slate-400">2026 Catalysts:</span> <span class="highlight-blue">Optimus</span> humanoid robot, unsupervised <span class="highlight-blue">Robotaxi</span> expansion (Dallas/Houston), and <span class="highlight-yellow">$25B</span> capital spending.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Suggestion Section -->
+        <div class="bg-slate-800 border-2 border-indigo-500 rounded-xl p-6 mt-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">AI VERDICT</div>
+            <h2 class="text-2xl font-bold text-white mb-4">Should you Buy, Hold, or Sell TSLA now?</h2>
+            
+            <div class="flex space-x-2 mb-6">
+                <button onclick="setProfile('short')" id="btn-short" class="px-4 py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition">Short-Term Trader</button>
+                <button onclick="setProfile('long')" id="btn-long" class="px-4 py-2 rounded-md bg-slate-700 text-slate-300 font-medium hover:bg-slate-600 transition">Long-Term Investor</button>
+            </div>
+
+            <!-- Dynamic Content Container -->
+            <div id="verdict-content" class="p-4 bg-slate-900 rounded-lg border border-slate-700">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const contentShort = `
+            <div class="flex items-center space-x-3 mb-3">
+                <span class="px-3 py-1 bg-red-500 text-white font-bold rounded-md text-lg shadow-lg shadow-red-500/30">SELL / TAKE PROFITS</span>
+            </div>
+            <p class="text-slate-300"><strong>Why:</strong> The stock is heavily <span class="text-red-400 font-semibold">overbought (RSI 74)</span> following an 18% run. It is currently trading at ~$445, which is well above the Wall Street average price target of ~$400. Combined with the looming resistance at $449.16 and the concerning gap between vehicle production and deliveries, a near-term pullback is highly probable.</p>
+            <p class="text-slate-400 text-sm mt-3 border-t border-slate-700 pt-3"><em>Action: Liquidate positions or set tight stop-losses around $435 to protect recent gains. Look to re-enter near the support level of $422.</em></p>
+        `;
+
+        const contentLong = `
+            <div class="flex items-center space-x-3 mb-3">
+                <span class="px-3 py-1 bg-yellow-500 text-white font-bold rounded-md text-lg shadow-lg shadow-yellow-500/30">HOLD / WAIT FOR DIP</span>
+            </div>
+            <p class="text-slate-300"><strong>Why:</strong> The fundamental transition from an EV maker to an AI/Robotics company is underway. Margins are improving (21.1%) and the EPS beat shows operational efficiency. However, because the current price is technically extended, it is not a prime entry point right now.</p>
+            <p class="text-slate-400 text-sm mt-3 border-t border-slate-700 pt-3"><em>Action: Hold existing core positions to benefit from Optimus and Robotaxi catalysts. Do not add new money here; wait for a broader market pullback closer to the 200-day moving average ($384) to accumulate more shares.</em></p>
+        `;
+
+        function setProfile(profile) {
+            const btnShort = document.getElementById('btn-short');
+            const btnLong = document.getElementById('btn-long');
+            const contentBox = document.getElementById('verdict-content');
+
+            if (profile === 'short') {
+                btnShort.classList.replace('bg-slate-700', 'bg-indigo-600');
+                btnShort.classList.replace('text-slate-300', 'text-white');
+                btnLong.classList.replace('bg-indigo-600', 'bg-slate-700');
+                btnLong.classList.replace('text-white', 'text-slate-300');
+                
+                contentBox.innerHTML = contentShort;
+            } else {
+                btnLong.classList.replace('bg-slate-700', 'bg-indigo-600');
+                btnLong.classList.replace('text-slate-300', 'text-white');
+                btnShort.classList.replace('bg-indigo-600', 'bg-slate-700');
+                btnShort.classList.replace('text-white', 'text-slate-300');
+
+                contentBox.innerHTML = contentLong;
+            }
+        }
+
+        // Initialize default view
+        setProfile('short');
+    </script>
+</body>
+</html>
